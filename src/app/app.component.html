@@ -16,6 +16,8 @@
 </nav>
 <!-- Main Navigation End -->
 
+<router-outlet></router-outlet>
+
 <div class="row">
 	<div class="col-md-8" style="border: 1px solid #000; border-radius: 5px; margin: 25px;">
 		<h1>App Component Display</h1>
@@ -29,6 +31,8 @@
 			</div>
 		</div>
 
+		<br/>
+		
 		<div class="row">
 			<div class="col-md-5">
 				<input class="form-control" [(ngModel)]="name" />
@@ -50,5 +54,3 @@
 
 	</div>
 </div>
-
-<router-outlet></router-outlet>

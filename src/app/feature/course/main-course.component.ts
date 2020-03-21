@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CoreService } from 'src/app/core/services/core.service';
-import { SharedService } from 'src/app/shared/services/shared.service';
+import { CoreService } from '../../core/services/core.service';
+import { SharedService } from '../../shared/services/shared.service';
 
 @Component({
   selector: 'app-main-course',
