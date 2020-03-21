@@ -4,7 +4,6 @@ import { Routes, RouterModule } from "@angular/router";
 import { MainFriendComponent } from './main-friend.component';
 
 import { SharedModule } from '../../shared/shared.module';
-import { TestComponent } from './test';
 
 const routes: Routes = [
   {
@@ -16,7 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
-  declarations: [MainFriendComponent, TestComponent],
+  declarations: [MainFriendComponent],
   exports: []
 })
 export class FriendModule {}

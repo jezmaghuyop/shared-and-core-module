@@ -9,7 +9,7 @@ import { UserComponent } from "./components/user.component";
   exports: [UserComponent]
 })
 export class SharedModule {
-  // constructor(@Optional() @SkipSelf() parentModule: SharedModule) {
-  //   console.log("Shared Module Module Loaded!");
-  // }
+  constructor(@Optional() @SkipSelf() parentModule: SharedModule) {
+    console.log("Shared Module Module Loaded!");
+  }
 }
