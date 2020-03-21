@@ -1,18 +1,34 @@
-<h1>Shared Component</h1>
+<div class="row">
+    <div class="col-md-8" style="border: 1px solid #000; border-radius: 5px; margin: 25px;">
+        <h1>Friend Component Display</h1>
 
-<shared-user user='sss'></shared-user>
+        <div class="row">
+            <div class="col-md-5">
+                <input class="form-control" [(ngModel)]="username" />
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" (click)="updateUsername()">Change Username</button>
+            </div>
+        </div>
 
-<br/>
+        <div class="row">
+            <div class="col-md-5">
+                <input class="form-control" [(ngModel)]="name" />
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" (click)="updateName()">Change Name</button>
+            </div>
+        </div>
 
-<shared-user user='sssx'></shared-user>
+        <p>
+            Username: {{coreService.username$ | async}}
+        </p>
 
+        <br />
 
-<hr/>
+        <p>
+            Name: {{sharedService.name$ | async}}
+        </p>
 
-<h1>Core Component</h1>
-
-<core-name name="Jez Reel"></core-name>
-
-<br/>
-
-<core-name name="John Doe"></core-name>
+    </div>
+</div>

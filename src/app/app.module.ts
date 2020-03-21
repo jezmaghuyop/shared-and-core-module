@@ -1,29 +1,29 @@
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
-import { CoreModule } from "./core/core.module";
-import { SharedModule } from "./shared/shared.module";
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
-import { AppComponent } from "./app.component";
-import { HelloComponent } from "./hello.component";
+import { AppComponent } from './app.component';
+import { HelloComponent } from './hello.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HelloComponent,
     children: []
   },
   {
-    path: "course",
+    path: 'course',
     loadChildren: () =>
-      import("./feature/course/course.module").then(m => m.CourseModule)
+      import('./feature/course/course.module').then(m => m.CourseModule)
   },
   {
-    path: "friend",
+    path: 'friend',
     loadChildren: () =>
-      import("./feature/friend/friend.module").then(m => m.FriendModule)
+      import('./feature/friend/friend.module').then(m => m.FriendModule)
   }
 ];
 
@@ -32,7 +32,8 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent]

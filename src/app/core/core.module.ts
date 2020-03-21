@@ -1,18 +1,18 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { NameComponent } from './components/name.component';
+import { CoreService } from './services/core.service';
 
 @NgModule({
-  declarations: [ NameComponent ],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule
   ],
-  exports: [ NameComponent ],
-  providers: [    
-  ]
+  providers: [
+    CoreService
+  ],
+  exports: []
 })
 
 export class CoreModule {

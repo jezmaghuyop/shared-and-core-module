@@ -1,13 +1,13 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: "shared-user",
-  template: "Hi {{user}}"
+  selector: 'app-shared-user',
+  template: 'Hi {{user}}'
 })
 export class UserComponent implements OnInit {
   @Input() user: string;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     console.log(this.user);

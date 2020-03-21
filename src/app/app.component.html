@@ -1,8 +1,8 @@
 <!-- Main Navigation Start -->
 <nav class="navbar navbar-dark navbar-expand-md navigation-clean-button">
-	<div class="container"><a class="navbar-brand" href="#">Angular Demo</a><button data-toggle="collapse" class="navbar-toggler"
-      data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-        class="navbar-toggler-icon"></span></button>
+	<div class="container"><a class="navbar-brand" href="#">Angular Demo</a><button data-toggle="collapse"
+			class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+				class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navcol-1">
 			<ul class="nav navbar-nav mr-auto">
 				<li class="nav-item" role="presentation"><a class="nav-link" href="#" routerLink="/">Home</a></li>
@@ -15,5 +15,40 @@
 	</div>
 </nav>
 <!-- Main Navigation End -->
+
+<div class="row">
+	<div class="col-md-8" style="border: 1px solid #000; border-radius: 5px; margin: 25px;">
+		<h1>App Component Display</h1>
+
+		<div class="row">
+			<div class="col-md-5">
+				<input class="form-control" [(ngModel)]="username" />
+			</div>
+			<div class="col-md-3">
+				<button class="btn btn-primary" (click)="updateUsername()">Change Username</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-5">
+				<input class="form-control" [(ngModel)]="name" />
+			</div>
+			<div class="col-md-3">
+				<button class="btn btn-primary" (click)="updateName()">Change Name</button>
+			</div>
+		</div>
+
+		<p>
+			Username: {{coreService.username$ | async}}
+		</p>
+
+		<br />
+
+		<p>
+			Name: {{sharedService.name$ | async}}
+		</p>
+
+	</div>
+</div>
 
 <router-outlet></router-outlet>
