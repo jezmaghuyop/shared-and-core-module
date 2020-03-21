@@ -1,0 +1,15 @@
+p {
+  font-family: Lato;
+}
+
+nav {
+  background-color: #000;
+}
+
+a {
+  color: #fff;
+}
+
+.jumbotron {
+  text-align: center;
+}
